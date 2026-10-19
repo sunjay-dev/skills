@@ -60,27 +60,9 @@ Copy (or link) a skill folder into wherever your harness scans for skills:
 
 On Windows, `scripts/link-skills.ps1` links every skill in this repo into your global skill directories using directory junctions. On macOS/Linux, run `scripts/link-skills.sh` (symlinks; a `git pull` keeps installs current).
 
-## Repo layout
+## Contributing
 
-```
-skills/
-  foreman/        # the current bucket (see Skills above)
-  ...             # more buckets as the collection grows: engineering/, productivity/, misc/, in-progress/, deprecated/
-scripts/          # dev tooling: link-skills, validate-skills, sync-plugin-version
-.changeset/       # pending changes; applied by the release flow
-.claude-plugin/   # Claude Code plugin + marketplace manifests
-.github/          # check + release workflows
-```
-
-Conventions for adding skills live in [AGENTS.md](./AGENTS.md). Sanity-check the repo any time with:
-
-```sh
-pnpm install
-pnpm run validate
-pnpm run check-plugin-version
-```
-
-Releases are versioned with changesets: add one for every meaningful change (`pnpm changeset`); `pnpm run version` applies them, updates [CHANGELOG.md](./CHANGELOG.md), and syncs the plugin manifest. On `main`, the Release workflow turns pending changesets into a "Version Packages" PR.
+Repo layout, skill conventions, checks, and the release flow live in [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## License
 
