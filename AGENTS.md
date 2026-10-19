@@ -1,12 +1,12 @@
 # Repo conventions
 
-This is sunjay-dev's personal agent-skills repo. Every skill follows the [Agent Skills](https://skills.sh) format and works across Claude Code, Codex, OpenCode, and other compatible harnesses.
+This is sunjay-dev's personal agent-skills repo. Every skill follows the [Agent Skills](https://skills.sh) format and works across Claude Code, Codex, OpenCode, and other compatible harnesses. The `foreman/` bucket is the exception in runtime terms: its standing orders need a T3 Code-style runtime (agent threads, schedules, worktrees, PR watches) plus [mattpocock/skills](https://github.com/mattpocock/skills) in the target repo for the worker flows.
 
 ## Layout
 
 Skills live in buckets under `skills/`:
 
-- `foreman/`: the 24/7 worker-pool standing orders (real worker sessions, GitHub-only coordination, PR-only flow)
+- `foreman/`: the 24/7 worker-pool standing orders for T3 Code (real worker sessions, GitHub-only coordination, PR-only flow; workers run mattpocock/skills flows)
 - `engineering/`: daily code work (create when needed)
 - `productivity/`: general workflow tools (create when needed)
 - `misc/`: kept around but rarely used, not promoted
