@@ -8,6 +8,12 @@
     "url": "https://github.com/sunjay-dev/skills"
   },
   "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "ai-agents",
+    "skills",
+    "workflows"
+  ],
   "scripts": {
     "validate": "node scripts/validate-skills.mjs",
     "changeset": "changeset",

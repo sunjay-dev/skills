@@ -8,6 +8,7 @@ set -euo pipefail
 # Each entry is a symlink into this repo, so a `git pull` keeps every installed
 # skill current. Re-run after adding, removing, or renaming a skill.
 # `deprecated/` and `misc/` buckets are skipped on purpose.
+# Adapted from mattpocock/skills (MIT License, Copyright (c) Matt Pocock).
 
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 DESTS=("$HOME/.claude/skills" "$HOME/.agents/skills")

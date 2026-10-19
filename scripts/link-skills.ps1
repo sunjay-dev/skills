@@ -6,6 +6,7 @@
 # Directory junctions are used (no admin rights needed), so a `git pull` in
 # this repo keeps every installed skill current. Re-run after adding,
 # removing, or renaming a skill. `deprecated\` and `misc\` buckets are skipped.
+# Adapted from mattpocock/skills (MIT License, Copyright (c) Matt Pocock).
 
 $ErrorActionPreference = 'Stop'
 

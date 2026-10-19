@@ -9,13 +9,12 @@
     {
       "name": "sunjay-skills",
       "source": "./",
-      "description": "24/7 foreman worker-pool standing orders: autonomous issue-to-PR pools coordinated through GitHub, for Claude Code and other agents.",
+      "description": "Sunjay's personal agent skills for coding agents, packaged as an installable plugin.",
       "category": "automation",
       "keywords": [
-        "foreman",
-        "agent-pool",
-        "automation",
-        "github"
+        "agent-skills",
+        "ai-agents",
+        "workflows"
       ]
     }
   ]
