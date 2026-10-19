@@ -4,12 +4,12 @@
     "name": "sunjay-dev",
     "url": "https://github.com/sunjay-dev"
   },
-  "description": "Sunjay's agent skills as an installable Claude Code plugin.",
+  "description": "My agent skills as an installable Claude Code plugin.",
   "plugins": [
     {
       "name": "sunjay-skills",
       "source": "./",
-      "description": "Sunjay's personal agent skills for coding agents, packaged as an installable plugin.",
+      "description": "My personal agent skills for coding agents, packaged as an installable plugin.",
       "category": "automation",
       "keywords": [
         "agent-skills",

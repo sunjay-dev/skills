@@ -2,7 +2,7 @@
   "name": "sunjay-skills",
   "version": "0.1.1",
   "private": true,
-  "description": "Sunjay's personal agent skills: standing orders and workflows for real engineering with coding agents",
+  "description": "My personal agent skills: a growing collection of standing orders and workflows for coding agents",
   "repository": {
     "type": "git",
     "url": "https://github.com/sunjay-dev/skills"

@@ -1,6 +1,6 @@
 # Skills
 
-Sunjay's personal agent skills: a growing collection of standing orders and workflows I use with real coding agents.
+My personal agent skills: a growing collection of standing orders and workflows I use with real coding agents.
 
 Small, editable, composable. Straight from my `.agents` directories.
 
