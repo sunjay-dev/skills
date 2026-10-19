@@ -68,15 +68,20 @@ Install [Matt Pocock's skills](https://github.com/mattpocock/skills) into the ta
 skills/
   foreman/        # the foreman pool standing orders (this repo's first bucket)
   ...             # future buckets: engineering/, productivity/, misc/, in-progress/, deprecated/
-scripts/          # dev tooling: link-skills (install locally), validate-skills
+scripts/          # dev tooling: link-skills, validate-skills, sync-plugin-version
+.changeset/       # pending changes; applied by the release flow
 .claude-plugin/   # Claude Code plugin + marketplace manifests
+.github/          # check + release workflows
 ```
 
 Conventions for adding skills live in [AGENTS.md](./AGENTS.md). Sanity-check the repo any time with:
 
 ```sh
 node scripts/validate-skills.mjs
+npm run check-plugin-version
 ```
+
+Releases are versioned with changesets: add one for every meaningful change (`npx changeset`); `npm run version` applies them, updates [CHANGELOG.md](./CHANGELOG.md), and syncs the plugin manifest. On `main`, the Release workflow turns pending changesets into a "Version Packages" PR.
 
 ## License
 
