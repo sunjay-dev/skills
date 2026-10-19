@@ -1,5 +1,0 @@
-interface:
-  display_name: "Foreman (peer)"
-  short_description: "24/7 worker-pool foreman, peer role (one of any number)"
-policy:
-  allow_implicit_invocation: false

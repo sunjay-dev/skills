@@ -2,7 +2,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
-.agent/
+.foreman/
 
 # this repo uses pnpm; ignore npm's lockfile and pnpm debug logs
 package-lock.json

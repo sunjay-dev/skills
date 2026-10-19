@@ -17,7 +17,6 @@
     "automation"
   ],
   "skills": [
-    "./skills/foreman/foreman-prime",
-    "./skills/foreman/foreman-peer"
+    "./skills/foreman/foreman"
   ]
 }

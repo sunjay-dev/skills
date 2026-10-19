@@ -1,0 +1,5 @@
+interface:
+  display_name: "Foreman"
+  short_description: "24/7 worker-pool foreman (role from the launch line: prime or peer-<n>)"
+policy:
+  allow_implicit_invocation: false
