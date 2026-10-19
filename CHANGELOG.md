@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0
+
+### Minor Changes
+
+- [`268b1fe`](https://github.com/sunjay-dev/skills/commit/268b1fedc418f184bf93ed855b9f371a7202edbb) Thanks [@sunjay-dev](https://github.com/sunjay-dev)! - Merged `foreman-prime` and `foreman-peer` into a single `foreman` skill: the launch line's role token now picks the role (prime / peer-<n>), and pool state lives in `.foreman/`.
+
 ## 0.2.0
 
 ### Minor Changes
