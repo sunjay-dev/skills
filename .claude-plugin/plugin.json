@@ -17,7 +17,7 @@
     "automation"
   ],
   "skills": [
-    "./skills/foreman/foreman-pool-a",
-    "./skills/foreman/foreman-pool-b"
+    "./skills/foreman/foreman-prime",
+    "./skills/foreman/foreman-peer"
   ]
 }

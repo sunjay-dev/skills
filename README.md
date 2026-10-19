@@ -8,10 +8,10 @@ Small, editable, composable. Straight from my `.agents` directories.
 
 ### foreman
 
-The two skills that run my 24/7 autonomous worker pool. Each is a full set of standing orders: a foreman agent orchestrates worker sessions that implement `ready-for-agent` GitHub issues as PRs, babysits those PRs, and splits the queue with a sibling pool through GitHub only (labels, claim comments, branches, PRs). The human reviews and merges; the foreman never merges and never pushes the default branch.
+The two skills that run my 24/7 autonomous worker pool. Each is a full set of standing orders: a foreman agent orchestrates worker sessions that implement `ready-for-agent` GitHub issues as PRs, babysits those PRs, and splits the queue with the other pools through GitHub only (labels, claim comments, branches, PRs). The human reviews and merges; the foreman never merges and never pushes the default branch.
 
-- **[foreman-pool-a](./skills/foreman/foreman-pool-a/SKILL.md)**: Foreman for the main server (pool-A). Round robin starts with Gemini; owns the hourly dispatch, spec branch bootstrap, and the daily maintenance item. Coordinates with a sibling pool-B through GitHub only.
-- **[foreman-pool-b](./skills/foreman/foreman-pool-b/SKILL.md)**: Foreman for the second server (pool-B). Round robin starts with OpenCode; skips maintenance by default (pool-A owns it) and re-checks origin before bootstrapping spec branches so the two pools never mint parallel branches.
+- **[foreman-prime](./skills/foreman/foreman-prime/SKILL.md)**: The prime foreman — the one pool that owns the shared duties. Runs on the main server; round robin starts with Gemini; owns the hourly dispatch, spec branch bootstrap, and the daily maintenance item. Coordinates with any number of peers through GitHub only.
+- **[foreman-peer](./skills/foreman/foreman-peer/SKILL.md)**: The generic peer foreman — spin up as many as you want, one live pool per server, each with an instance id (`peer-1`, `peer-2`, ...). Round robin starts with OpenCode; skips maintenance by default (the prime owns it) and re-checks origin before bootstrapping spec branches so pools never mint parallel branches.
 
 #### What a pool needs
 
@@ -30,9 +30,13 @@ The division of labour: Matt's skills describe how the work gets done; these ski
 
 The foreman skills are launched by hand, with one line, from a fresh thread in the target project:
 
-> You are the foreman for this repository (pool-A, main server). Read `.agents/skills/foreman-pool-a/SKILL.md` and follow it exactly, starting with SETUP.
+> You are the foreman for this repository (prime, main server). Read `.agents/skills/foreman-prime/SKILL.md` and follow it exactly, starting with SETUP.
 
-That assumes the skill folder is installed in the target repo at `.agents/skills/foreman-pool-a/`. Pool-B uses the same line with `pool-B, second server` and `foreman-pool-b`. Each skill then walks through setup, schedules, the claim protocol, dispatch, and the guardrails. Install [Matt Pocock's skills](https://github.com/mattpocock/skills) into the target repo first (`npx skills add mattpocock/skills`): the worker launch depends on the repo's `/implement` flow and its PR conventions coming from that set.
+That assumes the skill folder is installed in the target repo at `.agents/skills/foreman-prime/`. For more pools, use the peer skill with an instance id of your choosing and one live pool per server, e.g.:
+
+> You are the foreman for this repository (peer-1, server 2). Read `.agents/skills/foreman-peer/SKILL.md` and follow it exactly, starting with SETUP.
+
+Each skill then walks through setup, schedules, the claim protocol, dispatch, and the guardrails. Install [Matt Pocock's skills](https://github.com/mattpocock/skills) into the target repo first (`npx skills add mattpocock/skills`): the worker launch depends on the repo's `/implement` flow and its PR conventions coming from that set.
 
 ## Install
 
