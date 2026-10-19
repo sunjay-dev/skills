@@ -3,3 +3,7 @@ node_modules/
 Thumbs.db
 *.log
 .agent/
+
+# this repo uses pnpm; ignore npm's lockfile and pnpm debug logs
+package-lock.json
+pnpm-debug.log

@@ -45,7 +45,7 @@ policy:
 3. Add the skill, linked to its `SKILL.md`, to the top-level `README.md` and the bucket's `README.md`
 4. Add its path to `.claude-plugin/plugin.json`'s `skills` array (promoted buckets only)
 5. Run `node scripts/validate-skills.mjs` (CI runs it too)
-6. Add a changeset describing the change: `npx changeset`
+6. Add a changeset describing the change: `pnpm changeset`
 
 ## Style
 
@@ -55,9 +55,9 @@ policy:
 
 ## Versioning and releases
 
-`package.json` holds the version; `.claude-plugin/plugin.json` mirrors it.
+This repo uses pnpm (`packageManager` in `package.json` pins the version). `package.json` holds the version; `.claude-plugin/plugin.json` mirrors it.
 
-- Every meaningful change gets a changeset: `npx changeset` (patch for fixes, minor for new skills). Commit the generated file in `.changeset/`.
-- `npm run version` applies pending changesets: bumps the version, writes `CHANGELOG.md`, and syncs `plugin.json`.
+- Every meaningful change gets a changeset: `pnpm changeset` (patch for fixes, minor for new skills). Commit the generated file in `.changeset/`.
+- `pnpm run version` applies pending changesets: bumps the version, writes `CHANGELOG.md`, and syncs `plugin.json`.
 - Pushed to `main`, the Release workflow keeps a "Version Packages" PR open; merging it tags the release.
-- `npm run check-plugin-version` fails when the two manifests drift. CI runs it and `npm run validate` on every push and PR.
+- `pnpm run check-plugin-version` fails when the two manifests drift. CI runs it and `pnpm run validate` on every push and PR.

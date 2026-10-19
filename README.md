@@ -77,11 +77,12 @@ scripts/          # dev tooling: link-skills, validate-skills, sync-plugin-versi
 Conventions for adding skills live in [AGENTS.md](./AGENTS.md). Sanity-check the repo any time with:
 
 ```sh
-node scripts/validate-skills.mjs
-npm run check-plugin-version
+pnpm install
+pnpm run validate
+pnpm run check-plugin-version
 ```
 
-Releases are versioned with changesets: add one for every meaningful change (`npx changeset`); `npm run version` applies them, updates [CHANGELOG.md](./CHANGELOG.md), and syncs the plugin manifest. On `main`, the Release workflow turns pending changesets into a "Version Packages" PR.
+Releases are versioned with changesets: add one for every meaningful change (`pnpm changeset`); `pnpm run version` applies them, updates [CHANGELOG.md](./CHANGELOG.md), and syncs the plugin manifest. On `main`, the Release workflow turns pending changesets into a "Version Packages" PR.
 
 ## License
 
