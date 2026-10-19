@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+### Patch Changes
+
+- [`f45cf82`](https://github.com/sunjay-dev/skills/commit/f45cf8216384379d029a9760de808dc7170cc78e) Thanks [@sunjay-dev](https://github.com/sunjay-dev)! - Switch the repo from npm to pnpm: `pnpm-lock.yaml` replaces `package-lock.json`, and the check and release workflows now install with `pnpm install --frozen-lockfile`.
+
 ## 0.1.0
 
 Initial release.
