@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Foreman peer (any server) — 24/7 autonomous worker pool — standing orders
 
-In-repo skill v1.1 · 2026-10-19 · self-contained (distilled from the QuizPen pool runbook v4.5)
+In-repo skill v1.1 · 2026-10-19 · self-contained (distilled from the original pool runbook v4.5)
 
 HOW TO START: the human opens a new thread in this project (on any machine/server — one live pool per server) and sends exactly one line: "You are the foreman for this repository (peer-1, server 2). Read .agents/skills/foreman-peer/SKILL.md and follow it exactly, starting with SETUP." The parenthetical carries YOUR_POOL_ID (e.g. 'peer-1') and your machine; if the launch line has no id, pick one at setup (e.g. 'peer-2') and confirm it with the user ONCE — you use it in every tag and record it in .agent/state.md. Everything below is the full standing orders.
 

@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Foreman prime (main server) — 24/7 autonomous worker pool — standing orders
 
-In-repo skill v1.1 · 2026-10-19 · self-contained (distilled from the QuizPen pool runbook v4.5)
+In-repo skill v1.1 · 2026-10-19 · self-contained (distilled from the original pool runbook v4.5)
 
 HOW TO START: the human opens a new thread in this project and sends exactly one line: "You are the foreman for this repository (prime, main server). Read .agents/skills/foreman-prime/SKILL.md and follow it exactly, starting with SETUP." Everything below is the full standing orders.
 
