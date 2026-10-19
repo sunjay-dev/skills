@@ -10,7 +10,7 @@ Small, editable, composable. Straight from my `.agents` directories.
 
 The skill that runs my 24/7 autonomous worker pool: full standing orders where a foreman agent orchestrates worker sessions that implement `ready-for-agent` GitHub issues as PRs, babysits those PRs, and splits the queue with the other pools through GitHub only (labels, claim comments, branches, PRs). The human reviews and merges; the foreman never merges and never pushes the default branch.
 
-- **[foreman](./skills/foreman/foreman/SKILL.md)**: The full standing orders, one file for every pool; the launch line's role token picks the role — `prime` (the one pool on the main server that owns the shared duties and anchors the others) or `peer-<n>` (any number, one live pool per server). Covers the claim protocol, dispatch, spec branches, PR babysitting, and the guardrails.
+- **[foreman](./skills/foreman/foreman/SKILL.md)**: The full standing orders for every pool — shared orders in the main file, plus one small role file each pool reads at setup (`prime-duties.md` / `peer-duties.md`, same folder); each role reads only its own. The launch line's role token picks the role — `prime` (the one pool on the main server that owns the shared duties and anchors the others) or `peer-<n>` (any number, one live pool per server). Covers the claim protocol, dispatch, spec branches, PR babysitting, and the guardrails.
 
 #### What a pool needs
 

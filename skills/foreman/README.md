@@ -6,6 +6,6 @@ The skill here is **user-invoked** (`disable-model-invocation: true`): you launc
 
 ## Skills
 
-- **[foreman](./foreman/SKILL.md)**: The full standing orders — one file for every pool. The launch line's role token picks the role: `prime` (the one pool that owns the shared duties — the daily maintenance item — and anchors the others; runs on the main server) or `peer-<n>` (any number, one live pool per server, each with an id used in the GitHub claim tags). Launch lines:
+- **[foreman](./foreman/SKILL.md)**: The full standing orders — shared orders in the main file, plus one small role file each pool reads at setup (`prime-duties.md` / `peer-duties.md`, same folder); each role reads only its own. The launch line's role token picks the role: `prime` (the one pool that owns the shared duties — the daily maintenance item — and anchors the others; runs on the main server) or `peer-<n>` (any number, one live pool per server, each with an id used in the GitHub claim tags). Launch lines:
   - Prime: `You are the foreman for this repository (prime, main server). Read .agents/skills/foreman/SKILL.md and follow it exactly, starting with SETUP.`
   - Peer: the same line with `(peer-1, server 2)` — `.agents/skills/foreman/SKILL.md` again.
