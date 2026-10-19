@@ -1,0 +1,5 @@
+interface:
+  display_name: "Foreman (pool-B)"
+  short_description: "24/7 worker-pool foreman, second server"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,23 @@
+{
+  "name": "sunjay-skills",
+  "version": "0.1.0",
+  "description": "Sunjay's personal agent skills: 24/7 foreman worker-pool standing orders and more, plug-and-play with real engineering agents.",
+  "author": {
+    "name": "sunjay-dev",
+    "url": "https://github.com/sunjay-dev"
+  },
+  "homepage": "https://github.com/sunjay-dev/skills",
+  "repository": "https://github.com/sunjay-dev/skills",
+  "license": "MIT",
+  "keywords": [
+    "foreman",
+    "agent-pool",
+    "automation",
+    "github",
+    "skills"
+  ],
+  "skills": [
+    "./skills/foreman/foreman-pool-a",
+    "./skills/foreman/foreman-pool-b"
+  ]
+}

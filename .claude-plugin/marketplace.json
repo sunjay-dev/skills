@@ -1,0 +1,22 @@
+{
+  "name": "sunjay-dev",
+  "owner": {
+    "name": "sunjay-dev",
+    "url": "https://github.com/sunjay-dev"
+  },
+  "description": "Sunjay's agent skills as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "sunjay-skills",
+      "source": "./",
+      "description": "24/7 foreman worker-pool standing orders: autonomous issue-to-PR pools coordinated through GitHub, for Claude Code and other agents.",
+      "category": "automation",
+      "keywords": [
+        "foreman",
+        "agent-pool",
+        "automation",
+        "github"
+      ]
+    }
+  ]
+}
